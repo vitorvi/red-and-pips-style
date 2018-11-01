@@ -1,0 +1,72 @@
+@mixin button-large {
+  font-family: $custom_font-family-sans-serif, monospace;
+  font-weight: 900;
+  margin-bottom: 0;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 20px;
+  line-height: 1rem;
+  font-style: normal;
+  @include media-breakpoint-up(lg) {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 1.5rem;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+  }
+}
+
+@mixin button {
+  font-family: $custom_font-family-sans-serif, monospace;
+  font-weight: 400;
+  margin-bottom: 0;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 16px;
+  line-height: 1rem;
+  font-style: normal;
+  border: 1px solid $red;
+  color: $red;
+  padding: .25rem .5rem;
+  @include media-breakpoint-up(lg) {
+    padding: .5rem 1rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1rem;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+  }
+}
+
+.btn-large { @include button-large; }
+
+.btn {
+  @include button;
+  text-decoration: none;
+  transition: all .15s ease-in-out;
+  * {
+    transition: all .15s ease-in-out;
+  }
+  &:hover {
+    color: $wine !important;
+    border-color: $wine !important;
+    * {
+      color: $wine !important;
+      border-color: $wine !important;
+    }
+    text-decoration: none;
+  }
+  &.dark-bg {
+    &:hover {
+      color: $red !important;
+      border-color: $red !important;
+      * {
+        color: $red !important;
+        border-color: $red !important;
+      }
+      text-decoration: none;
+    }
+  }
+}

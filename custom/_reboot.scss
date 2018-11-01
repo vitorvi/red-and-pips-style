@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 162.5%;
+  font-family: "Roboto";
+  @include media-breakpoint-up(lg) {
+    font-size: 162.5%;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 162.5%;
+  }
+}
+
+body {
+  font-family: "Roboto";
+  font-weight: 200;
+  font-style: normal;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img, svg {
+  vertical-align: middle;
+}
+
+button {
+  &:focus {
+    outline: none;
+  }
+}

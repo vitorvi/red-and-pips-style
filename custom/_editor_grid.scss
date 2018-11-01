@@ -1,0 +1,7 @@
+// Custom GC fluid container
+
+@if $enable-grid-classes {
+  #tinymce {
+    @include make-fluid-container();
+  }
+}

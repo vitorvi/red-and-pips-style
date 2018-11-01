@@ -1,0 +1,330 @@
+// Custom GC Typography
+
+@mixin titulo-1 {
+  font-family: $custom_font-family-sans-serif, sans-serif;
+  font-size: 30px;
+  line-height: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 0;
+  color: $red;
+  font-style: normal;
+  @include media-breakpoint-up(lg) {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 70px;
+    line-height: 3rem;
+  }
+}
+
+@mixin titulo-2 {
+	font-family: $custom_font-family-sans-serif, sans-serif;
+  font-size: 20px;
+  line-height: 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: $red;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  font-style: normal;
+  @include media-breakpoint-up(lg) {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 2rem;
+    letter-spacing: 4px;
+    word-spacing: 4px;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 50px;
+    line-height: 2.5rem;
+  }
+}
+
+@mixin titulo-3 {
+  font-family: $custom_font-family-sans-serif, sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: $red;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  @include media-breakpoint-up(lg) {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 2rem;
+    letter-spacing: 4px;
+    word-spacing: 4px;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 50px;
+    line-height: 2.5rem;
+  }
+}
+
+@mixin titulo-4 {
+  font-family: $custom_font-family-sans-serif, sans-serif;
+  font-size: 16px;
+  line-height: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: $red;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-style: normal;
+  @include media-breakpoint-up(lg) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.5rem;
+    letter-spacing: 3px;
+    word-spacing: 3px;
+  }
+}
+
+@mixin titulo-5 {
+  font-family: $custom_font-family-sans-serif, sans-serif;
+  font-size: 16px;
+  line-height: 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: $red;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-style: normal;
+  @include media-breakpoint-up(lg) {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+  }
+}
+
+@mixin titulo-6 {
+  font-family: $custom_font-family-sans-serif, sans-serif;
+  font-size: 16px;
+  line-height: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $red;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-style: normal;
+  @include media-breakpoint-up(lg) {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 2rem;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+  }
+}
+
+@mixin texto-grande {
+  font-family: $custom_font-family-sans-serif, sans-serif;
+  font-size: 20px;
+  line-height: 1rem;
+  font-weight: 300;
+  margin-bottom: 0;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 300;
+  color: $red;
+  @include media-breakpoint-up(lg) {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 2rem;
+  }
+}
+
+@mixin texto-medio {
+  font-family: $custom_font-family-sans-serif, sans-serif;
+	font-size: 16px;
+  line-height: 1rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  text-transform: none;
+  letter-spacing: 0;
+  font-style: normal;
+  @include media-breakpoint-up(lg) {
+    font-size: 18px;
+    font-style: normal;
+  }
+}
+
+@mixin texto-pequeno {
+  font-family: $custom_font-family-sans-serif, monospace;
+	font-weight: 400;
+	margin-bottom: .5rem;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: .5rem;
+  line-height: 1rem;
+  font-style: normal;
+  color: $red;
+  @include media-breakpoint-up(lg) {
+    font-size: 0.625rem;
+  	line-height: 1rem;
+    font-style: normal;
+  }
+}
+
+h1, .h1 { @include titulo-1; }
+
+h2, .h2 { @include titulo-2; }
+
+h3, .h3 { @include titulo-3; }
+
+h4, .h4 { @include titulo-4; }
+
+h5, .h5 { @include titulo-5; }
+
+h6, .h6 { @include titulo-6; }
+
+p, .text-medium, a, li, li a { @include texto-medio; }
+
+p, li {
+  color: $red;
+}
+
+.text-small { @include texto-pequeno; }
+
+blockquote, .text-large, blockquote p { @include texto-grande; }
+
+figcaption, input, textarea { @include texto-pequeno; }
+
+h1, .h1 {
+  strong {
+    font-weight: 800;
+  }
+}
+
+p, .text-medium {
+  strong {
+    font-weight: 700;
+  }
+  & + p {
+    margin-top: .5rem;
+  }
+  & + .text-medium {
+    margin-top: .5rem;
+  }
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	color: $red;
+	&:first-child {
+    	margin-top: 0;
+    }
+}
+
+*::selection {
+    background-color: $red;
+    color: $white;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, blockquote {
+	text-align: left;
+}
+
+figure {
+	background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+ul, ol, dl {
+  margin-bottom: 0;
+  li {
+    list-style-type: none;
+    a {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+sup {
+  font-size: 66.666666%;
+}
+
+ol {
+  counter-reset: item;
+  li {
+    counter-increment: item;
+    position: relative;
+    padding-left: .75rem;
+    @include media-breakpoint-up(lg) {
+      padding-left: 1rem;
+    }
+    &:before {
+      content: counter(item)". ";
+      position: absolute;
+      left: 0;
+      top: 0;
+      text-align: left;
+      display: inline-block;
+    }
+  }
+}
+
+a, a:hover {
+  text-decoration: underline;
+  transition: all .15s ease-in-out;
+}
+
+a, li, a:hover, a:active {
+    color: inherit;
+}
+
+.link-lg {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -.5rem;
+    left: 0;
+    width: 100%;
+    border: 1px solid $red;
+    @include media-breakpoint-up(lg) {
+      border: 2px solid $red;
+    }
+  }
+}
+
+// .dark-red-bg, .wine-bg {
+//   h1, .h1, h3, .h2, h2, .h3, h4, .h4, h5, .h5, h6, .h6, blockquote {
+//     color: $white;
+//   }
+//   p, address, figcaption, a {
+//     color: $white;
+//   }
+// }
+// .red-bg {
+//   h1, .h1, h3, .h2, h2, .h3, h4, .h4, h5, .h5, h6, .h6, p, address, figcaption, a {
+//     color: $white;
+//   }
+// }
+// .rose-bg {
+//   h1, .h1, h3, .h2, h2, .h3, h4, .h4, h5, .h5, h6, .h6, p, address, figcaption, a {
+//     color: $wine;
+//   }
+// }
+// .white-bg {
+//   h1, .h1, h3, .h2, h2, .h3, h4, .h4, h5, .h5, h6, .h6, p, address, figcaption, a {
+//     color: $wine;
+//   }
+// }

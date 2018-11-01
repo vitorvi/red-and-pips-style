@@ -1,0 +1,38 @@
+body {
+  overflow: hidden;
+  pointer-events: none;
+  * {
+    pointer-events: all;
+  }
+}
+
+figure {
+  margin-bottom: 0;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+hr {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  border-top-width: .5rem;
+}
+
+address {
+  margin-bottom: 0;
+}
+
+#parallax-stage {
+  pointer-events: none;
+  * {
+    pointer-events: all;
+  }
+  [data-enllax-ratio] {
+    pointer-events: none;
+    * {
+      pointer-events: all;
+    }
+  }
+}

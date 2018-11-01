@@ -1,0 +1,6 @@
+#tinymce {
+    padding-top: 1rem !important;
+    @include media-breakpoint-up(lg) {
+      padding-top: 2rem !important; 
+    }
+}
