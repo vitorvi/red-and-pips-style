@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -613,6 +614,41 @@ h6, .h6 {
       letter-spacing: 2px;
       word-spacing: 2px; } }
 
+.custom-content h1, .custom-content .h1 {
+  font-family: "basic-sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 20px;
+  line-height: 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #EB5F6D;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  font-style: normal; }
+  @media (min-width: 1025px) {
+    .custom-content h1, .custom-content .h1 {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 40px;
+      line-height: 2rem;
+      letter-spacing: 4px;
+      word-spacing: 4px; } }
+  @media (min-width: 1441px) {
+    .custom-content h1, .custom-content .h1 {
+      font-size: 50px;
+      line-height: 2.5rem; } }
+.custom-content ul li {
+  padding-left: .5rem;
+  position: relative; }
+  .custom-content ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0; }
+.custom-content img {
+  margin-bottom: 1rem;
+  margin-top: 1rem; }
+
 p, .text-medium, a, li, li a {
   font-family: "basic-sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: 16px;
@@ -692,8 +728,6 @@ p + .text-medium, .text-medium + .text-medium {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: #EB5F6D; }
-  h1:first-child, .h1:first-child, h2:first-child, .h2:first-child, h3:first-child, .h3:first-child, h4:first-child, .h4:first-child, h5:first-child, .h5:first-child, h6:first-child, .h6:first-child {
-    margin-top: 0; }
 
 *::selection {
   background-color: #EB5F6D;
@@ -712,9 +746,9 @@ ul, ol, dl {
   ul li, ol li, dl li {
     list-style-type: none; }
     ul li a, ol li a, dl li a {
-      text-decoration: underline; }
+      text-decoration: none; }
       ul li a:hover, ol li a:hover, dl li a:hover {
-        text-decoration: underline; }
+        text-decoration: none; }
 
 sup {
   font-size: 66.666666%; }
@@ -737,8 +771,11 @@ ol {
       display: inline-block; }
 
 a, a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   transition: all .15s ease-in-out; }
+
+a:hover {
+  opacity: .75; }
 
 a, li, a:hover, a:active {
   color: inherit; }
@@ -7497,8 +7534,7 @@ img.w-100, img.w-50, img.w-75, img.w-25 {
           letter-spacing: 1px;
           color: #FFFFFF;
           text-decoration: none;
-          font-weight: 300;
-          text-transform: lowercase; }
+          font-weight: 300; }
           .page-header #menu-mobile ul li a:hover {
             text-decoration: none; }
           @media (min-width: 768px) {
@@ -7536,7 +7572,8 @@ img.w-100, img.w-50, img.w-75, img.w-25 {
     display: block;
     transition: transform .15s ease; }
   .page-header #languages li:hover a {
-    transform: translateY(-4px); }
+    transform: translateY(-4px);
+    opacity: 1; }
   .page-header #menu-desktop .current-menu-item a, .page-header #menu-mobile .current-menu-item a, .page-header #languages .current-menu-item a, .page-header #languages-mobile .current-menu-item a {
     font-weight: 700 !important; }
   .page-header #menu-desktop .current-lang a, .page-header #menu-mobile .current-lang a, .page-header #languages .current-lang a, .page-header #languages-mobile .current-lang a {
@@ -7554,10 +7591,10 @@ img.w-100, img.w-50, img.w-75, img.w-25 {
       .page-header #menu-desktop ul li:first-child {
         margin-left: 2rem; }
       .page-header #menu-desktop ul li:hover a {
-        transform: translateY(-4px); }
+        transform: translateY(-4px);
+        opacity: 1; }
   .page-header #menu-desktop a {
     color: #FFFFFF;
-    text-transform: lowercase;
     transition: color .1s linear;
     letter-spacing: .5px;
     font-weight: 300;
@@ -7700,7 +7737,8 @@ main {
       display: block;
       transition: transform .15s ease; }
     .page-footer .social-media li:hover a {
-      transform: translateY(-4px); }
+      transform: translateY(-4px);
+      opacity: 1; }
     .page-footer .social-media li i {
       font-size: 1rem; }
     .page-footer .social-media li:first-child {

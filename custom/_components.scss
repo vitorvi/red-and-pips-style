@@ -356,7 +356,6 @@ img {
                     color: $white;
                     text-decoration: none;
                     font-weight: 300;
-                    text-transform: lowercase;
                     &:hover {
                       text-decoration: none;
                     }
@@ -411,6 +410,7 @@ img {
         &:hover {
           a {
             transform: translateY(-4px);
+            opacity: 1;
           }
         }
       }
@@ -441,13 +441,13 @@ img {
                 &:hover {
                   a {
                     transform: translateY(-4px);
+                    opacity: 1;
                   }
                 }
             }
         }
         a {
             color: $white;
-            text-transform: lowercase;
             transition: color .1s linear;
             letter-spacing: .5px;
             font-weight: 300;
@@ -645,6 +645,7 @@ main {
       &:hover {
         a {
           transform: translateY(-4px);
+          opacity: 1;
         }
       }
       i {

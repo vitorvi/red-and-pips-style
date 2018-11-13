@@ -192,6 +192,26 @@ h5, .h5 { @include titulo-5; }
 
 h6, .h6 { @include titulo-6; }
 
+.custom-content {
+  h1, .h1 { @include titulo-2; }
+  ul {
+    li {
+      padding-left: .5rem;
+      position: relative;
+      &::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+  img {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}
+
 p, .text-medium, a, li, li a { @include texto-medio; }
 
 p, li {
@@ -224,9 +244,6 @@ p, .text-medium {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	color: $red;
-	&:first-child {
-    	margin-top: 0;
-    }
 }
 
 *::selection {
@@ -249,9 +266,9 @@ ul, ol, dl {
   li {
     list-style-type: none;
     a {
-      text-decoration: underline;
+      text-decoration: none;
       &:hover {
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
   }
@@ -282,8 +299,12 @@ ol {
 }
 
 a, a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   transition: all .15s ease-in-out;
+}
+
+a:hover {
+  opacity: .75;
 }
 
 a, li, a:hover, a:active {
