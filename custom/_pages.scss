@@ -1,4 +1,23 @@
 .home {
+  .page-cover {
+    .seed-element {
+      height: calc(100% + 5rem);
+      margin-top: -2.5rem;
+      position: relative;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: auto;
+        transform: translateX(50%);
+        @include media-breakpoint-up(md) {
+          height: 100%;
+          transform: none;
+        }
+      }
+    }
+  }
   .intro {
     position: relative;
     z-index: -1;
@@ -12,7 +31,7 @@
       }
       .seed-intro {
         width: 100%;
-        
+
         height: 3rem;
         margin-bottom: 2rem;
         position: relative;
@@ -101,6 +120,7 @@
        background-position: center;
        width: 100%;
        border-radius: 10px;
+       box-shadow: .125rem .25rem 2.5rem rgba(#000000, .1);
      }
    }
    .seed-strip {

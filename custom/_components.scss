@@ -604,6 +604,7 @@ main {
     .card {
       border: none;
       margin-top: -4rem;
+      box-shadow: 0.125rem 0.25rem 2.5rem rgba(#000000, 0.1);
       @include media-breakpoint-up(lg) {
         margin-top: -8rem;
       }
