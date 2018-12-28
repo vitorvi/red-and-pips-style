@@ -262,6 +262,10 @@
   .current-project {
     .project-cover {
       position: relative;
+      img {
+        max-height: 75vh;
+        object-fit: contain;;
+      }
       .seed-strip {
         @include media-breakpoint-up(lg) {
           top: 0;

@@ -9412,6 +9412,7 @@ address {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-blend-mode: screen;
 }
 .page-cover.cover-contain {
   background-size: contain;
@@ -10180,6 +10181,10 @@ main > .members:last-child, main > .highlight:last-child {
 }
 .projects .current-project .project-cover {
   position: relative;
+}
+.projects .current-project .project-cover img {
+  max-height: 75vh;
+  object-fit: contain;
 }
 @media (min-width: 1025px) {
   .projects .current-project .project-cover .seed-strip {
